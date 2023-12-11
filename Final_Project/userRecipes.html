@@ -1,0 +1,162 @@
+<!-- Luke McGinley -->
+<!-- Database Managnment Systems-->
+<!--- 12/10/23 -->
+<!---- Final Project - Recipe Project - User Recipes Page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Recipes</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        h1 {
+            color: #4caf50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .recipe-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            /* Added for positioning */
+        }
+
+        .recipe {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .recipe h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .recipe p {
+            color: #555;
+            margin: 0;
+        }
+
+        .recipe .username {
+            font-weight: bold;
+            color: #2196F3;
+        }
+
+        .add-recipe-btn {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .add-recipe-btn a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #4caf50;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-form {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-form label,
+        .search-form input,
+        .search-form button {
+            margin-bottom: 10px;
+            margin-right: 5px;
+        }
+
+        .search-form input {
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        .search-form button {
+            background-color: #2196F3;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .my-recipes-btn {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .my-recipes-btn a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #2196F3;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .my-recipes-btn a:hover {
+            background-color: #0c548f;
+            /* Darker green on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="recipe-container">
+        <div class="search-form">
+            <form action="/search" method="POST">
+                <label for="searchTerm">Search Recipes:</label>
+                <input type="text" id="searchTerm" name="searchTerm" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <div class="add-recipe-btn">
+            <a href="/addRecipe">Add Recipe</a>
+        </div>
+        <div class="my-recipes-btn">
+            <a href="/myRecipes">My Recipes</a>
+        </div>
+        <h1>User Recipes</h1>
+
+        <!-- Display user-specific recipes here -->
+        <div class="recipe">
+            <h2>Recipe Title 1</h2>
+            <p>Recipe description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+</body>
+
+</html>
